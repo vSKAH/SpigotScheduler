@@ -30,7 +30,7 @@ public class AutoSchedulerHandler {
         AutoSchedulerManager.getInstance().getAutoScheduler(schedulerName).buildAutoSchedulerModel(((calendar, autoSchedulerModel) -> {
             long firstStart = calendar.getTime().getTime() - System.currentTimeMillis();
             long repeatPeriod = TimeUnit.DAYS.toMillis(7);
-            ExecutorServiceUtil.execute(() -> autoSchedulerModel.getSchedulerCommand().forEach(cmd -> Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd)), firstStart, repeatPeriod, TimeUnit.MILLISECONDS);
+            ExecutorServiceUtil.execute(() -> Bukkit.getScheduler().runTask(plugin, () -> autoSchedulerModel.getSchedulerCommand().forEach(cmd -> Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd))), firstStart, repeatPeriod, TimeUnit.MILLISECONDS);
         }));
     }
 
