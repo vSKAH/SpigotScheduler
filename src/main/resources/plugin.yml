@@ -1,0 +1,16 @@
+name: SpigotScheduler
+main: fr.skoupi.spigotscheduler.SpigotScheduler
+version: 1.0-SNAPSHOT
+authors:
+  - vSKAH
+  - SKAH#7513
+  - Jimmy
+  - Skoupi.fr
+commands:
+  scheduler:
+    usage: /scheduler
+    aliases:
+      - sched
+    description: Show all schedulers
+    permission: spigotscheduler.command.scheduler
+    executor: fr.skoupi.spigotscheduler.commands.SchedulerCommand

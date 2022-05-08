@@ -1,0 +1,9 @@
+schedulers:
+  test:
+    description: Test scheduler
+    commands:
+      - "say hello world"
+      - "say goodbye world"
+    dayInWeek: 1
+    hourInDay: 20
+    minuteInHour: 1
