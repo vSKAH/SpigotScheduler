@@ -12,7 +12,6 @@ import fr.skoupi.spigotscheduler.utils.ExecutorServiceUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class AutoSchedulerHandler {
